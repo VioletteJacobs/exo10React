@@ -31,6 +31,7 @@ export class App extends Component {
     return (
       <div>
         <h1 onClick={()=>{this.changeTitle()}}>{this.state.titre}</h1>
+        <h1 onClick={this.changeTitle}>{this.state.titre}</h1>
 
         <p className="para">{this.state.paragraphe}</p>
 
@@ -47,7 +48,7 @@ export class App extends Component {
         <button onClick={()=>{this.changeH2()}}>Nouveau sous titre</button>
 
         <p>{this.state.para2}</p>
-        <textarea onChange={()=>{this.changePara()}} name="" id="" cols="30" rows="10"></textarea>
+        <textarea onClick={()=>{this.changePara}} name="" id="" cols="30" rows="10"></textarea>
 
       </div>
     )
